@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlowPilot — Chat</title>
+  <link rel="stylesheet" href="../static/css/chat.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+<div class="layout">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="logo-area">
+      <img src="../static/imagens/logo.png" alt="FlowPilot" class="logo" />
+    </div>
+
+    <nav class="menu">
+      <a href="telausuario.html" class="item"><i class="fa fa-user icon-fa"></i> Minha conta</a>
+      <a href="telaplanos.html" class="item"><i class="fa fa-box icon-fa"></i> Meus planos</a>
+      <a href="chat.html" class="item active"><i class="fa fa-comment-dots icon-fa"></i> Membros</a>
+      <a href="telaajuda.html" class="item"><i class="fa fa-circle-question icon-fa"></i> Ajuda</a>
+      <a href="sobrenos.html" class="item"><i class="fa fa-info-circle icon-fa"></i> Sobre nós</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+    <!-- TOPBAR -->
+    <header class="topbar">
+      <div class="search-wrapper">
+        <i class="fa fa-search search-icon" aria-hidden="true"></i>
+        <input type="text" placeholder="Pesquise" class="search">
+      </div>
+
+      <div class="topbar-right">
+        <div class="profile-mini">
+          <img class="mini-photo" src="../static/imagens/avatar-default.svg" alt="avatar">
+          <div class="mini-meta">
+            <strong class="mini-name">Usuário</strong>
+            <p class="mini-role">Cargo</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MEMBERS LIST -->
+    <section class="members">
+      <div class="members-card">
+        <div class="members-header">
+          <div class="tabs">
+            <button class="tab active">Ativas</button>
+            <button class="tab">Encerradas</button>
+          </div>
+          <div class="members-actions">
+            <button class="filter">Filtrar</button>
+          </div>
+        </div>
+
+        <div class="members-list">
+          <div class="member-row">
+            <label class="select-circle"><input type="radio" name="member-select" /></label>
+            <img class="member-avatar" src="../static/imagens/avatar-default.svg" alt="avatar" />
+            <div class="member-info">
+              <div class="member-name">Você</div>
+              <div class="member-email">helena.moura.flowp@gmail.com</div>
+            </div>
+            <div class="member-menu"> <i class="fa fa-ellipsis-h"></i> </div>
+          </div>
+
+          <div class="member-row">
+            <label class="select-circle"><input type="radio" name="member-select" /></label>
+            <img class="member-avatar" src="../static/imagens/avatar-default.svg" alt="avatar" />
+            <div class="member-info">
+              <div class="member-name">Isabela Monteiro</div>
+              <div class="member-email">isabela.monteiro.flowp@gmail.com</div>
+            </div>
+            <div class="member-menu"> <i class="fa fa-ellipsis-h"></i> </div>
+          </div>
+
+          <div class="member-row">
+            <label class="select-circle"><input type="radio" name="member-select" /></label>
+            <img class="member-avatar" src="../static/imagens/avatar-default.svg" alt="avatar" />
+            <div class="member-info">
+              <div class="member-name">Miguel Andrade</div>
+              <div class="member-email">miguel.andrade.flowp@gmail.com</div>
+            </div>
+            <div class="member-menu"> <i class="fa fa-ellipsis-h"></i> </div>
+          </div>
+
+          <div class="member-row">
+            <label class="select-circle"><input type="radio" name="member-select" /></label>
+            <img class="member-avatar" src="../static/imagens/avatar-default.svg" alt="avatar" />
+            <div class="member-info">
+              <div class="member-name">Lucas Ferreira</div>
+              <div class="member-email">lucas.ferreira.flowp@gmail.com</div>
+            </div>
+            <div class="member-menu"> <i class="fa fa-ellipsis-h"></i> </div>
+          </div>
+
+          <div class="member-row">
+            <label class="select-circle"><input type="radio" name="member-select" /></label>
+            <img class="member-avatar" src="../static/imagens/avatar-default.svg" alt="avatar" />
+            <div class="member-info">
+              <div class="member-name">Enzo Ribeiro</div>
+              <div class="member-email">enzo.ribeiro.flowp@gmail.com</div>
+            </div>
+            <div class="member-menu"> <i class="fa fa-ellipsis-h"></i> </div>
+          </div>
+
+          <div class="member-row">
+            <label class="select-circle"><input type="radio" name="member-select" /></label>
+            <img class="member-avatar" src="../static/imagens/avatar-default.svg" alt="avatar" />
+            <div class="member-info">
+              <div class="member-name">Manuela Duarte</div>
+              <div class="member-email">manuela.duarte.flowp@gmail.com</div>
+            </div>
+            <div class="member-menu"> <i class="fa fa-ellipsis-h"></i> </div>
+          </div>
+
+          <div class="member-row">
+            <label class="select-circle"><input type="radio" name="member-select" /></label>
+            <img class="member-avatar" src="../static/imagens/avatar-default.svg" alt="avatar" />
+            <div class="member-info">
+              <div class="member-name">Theo Carvalho</div>
+              <div class="member-email">theo.carvalho.flowp@gmail.com</div>
+            </div>
+            <div class="member-menu"> <i class="fa fa-ellipsis-h"></i> </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BOTTOM NAV -->
+    <div class="bottom-nav">
+      <a href="home.html" class="icon-btn"><i class="fa fa-home"></i></a>
+      <a href="chat.html" class="icon-btn"><i class="fa fa-comment-dots"></i></a>
+      <a href="novo.html" class="icon-btn main-circle"><i class="fa fa-plus"></i></a>
+      <a href="check.html" class="icon-btn"><i class="fa fa-check"></i></a>
+      <a href="lista.html" class="icon-btn"><i class="fa fa-list-ul"></i></a>
+    </div>
+
+  </main>
+
+</div>
+
+  <script src="../static/js/chat-profile.js"></script>
+</body>
+</html>

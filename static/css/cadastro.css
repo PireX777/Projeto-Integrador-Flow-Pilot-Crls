@@ -1,0 +1,171 @@
+/* ======= ESTILO GERAL ======= */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0B1124;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* ======= CONTAINER PRINCIPAL ======= */
+.container {
+    text-align: center;
+}
+
+.logo-img {
+    width: 500px;
+    opacity: 0.9;
+}
+
+.logo-text {
+    font-size: 28px;
+    font-weight: 600;
+    color: white;
+    margin-top: 8px;
+    margin-bottom: 25px;
+}
+
+/* ======= CARD ======= */
+.card {
+    background: white;
+    width: 390px;
+    padding: 35px 30px;
+    border-radius: 16px;
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.2);
+    text-align: left;
+    margin: 0 auto;
+}
+
+/* ======= INPUTS ======= */
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d8d8d8;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border: 1px solid #d8d8d8;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* ======= SENHA ======= */
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper .toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 17px;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.password-wrapper .toggle-password:hover {
+    opacity: 1;
+}
+
+/* ======= CHECKBOX ======= */
+.checkbox {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.checkbox a {
+    text-decoration: none;
+    color: #003b9a;
+    font-weight: 600;
+}
+
+.checkbox input {
+    transform: scale(1.1);
+}
+
+/* ======= BOTÃO CRIAR CONTA ======= */
+.btn-primary {
+    width: 100%;
+    background-color: #0d3c85;
+    border: none;
+    padding: 12px;
+    color: white;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: 0.25s;
+}
+
+.btn-primary:hover {
+    background-color: #0b2f6b;
+}
+
+/* ======= DIVISOR ======= */
+.divider {
+    text-align: center;
+    font-size: 13px;
+    margin: 18px 0;
+    color: #555;
+}
+
+/* ======= SOCIAL LOGIN ======= */
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-btn {
+    border: 1px solid #ccc;
+    background: white;
+    padding: 10px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.25s;
+}
+
+.social-btn:hover {
+    background-color: #f3f3f3;
+}
+
+/* Google */
+.google {
+    border-color: #ddd;
+}
+
+/* Apple */
+.apple {
+    border-color: #ddd;
+}
+
+/* ======= LINK PARA LOGIN ======= */
+.login-link {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 13px;
+}
+
+.login-link a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #003b9a;
+}

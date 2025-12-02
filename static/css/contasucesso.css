@@ -1,0 +1,152 @@
+/* Variáveis de Cores */
+:root {
+    --bg-dark: #121520; /* Fundo escuro */
+    --modal-bg: #FFFFFF; /* Fundo do modal */
+    --text-light: #F0F0F0; /* Cor do texto principal */
+    --flowpilot-green: #007C78; /* Tom esverdeado/azulado da marca */
+    --button-blue: #185E9F; /* Azul escuro do botão */
+    --icon-blue: #3E8DDA; /* Azul claro do ícone de sucesso */
+    --icon-dark-blue: #1A54A6; /* Azul mais escuro do ícone de sucesso */
+}
+
+/* 1. Estilos Globais e Fundo */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif; /* Fonte simples, como na imagem */
+}
+
+body {
+    background-color: var(--bg-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px; /* Limita a largura geral */
+}
+
+/* 2. Estilização do Logo FlowPilot */
+.logo-area {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text-light);
+}
+
+
+
+
+.logo-icon {
+    font-size: 30px;
+    margin-bottom: 5px;
+    /* Simplifica o ícone complexo do FlowPilot para um envelope/avião de papel */
+}
+
+.logo-area h1 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+/* 3. Estilização da Caixa Modal */
+.modal {
+    background-color: var(--modal-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #AAA;
+    cursor: pointer;
+}
+
+.modal-content {
+    padding: 20px 0;
+}
+
+/* 4. Estilização do Ícone de Sucesso (o hexágono) */
+.success-icon-container {
+    position: relative;
+    width: 100px; /* Tamanho da área do ícone */
+    height: 100px;
+    margin: 0 auto 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hexagon-bg {
+    /* Simulando a forma hexagonal e a cor */
+    width: 80px;
+    height: 90px;
+    background: linear-gradient(to bottom, var(--icon-blue), var(--icon-dark-blue));
+    position: absolute;
+    /* Transformações para simular um hexágono */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transform: rotate(15deg); /* Pequena rotação para se assemelhar à imagem */
+    opacity: 0.9;
+}
+
+.inner-icon {
+    /* O ícone interno (câmera, check, etc. na imagem) */
+    position: relative;
+    z-index: 1;
+    font-size: 40px;
+    /* Usando um ícone simples aqui, mas em produção seria um SVG ou ícone de fonte */
+}
+
+
+/* 5. Estilização do Texto e Botão */
+.modal-content h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.modal-content p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.main-button {
+    text-decoration: none;
+    background-color: var(--button-blue);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    padding: 12px 60px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: calc(100% - 40px); /* Ajusta a largura do botão para ser menor que o modal */
+    max-width: 300px;
+}
+
+a{
+    text-decoration: none;
+    color: #FFFFFF;
+
+}
+.main-button:hover {
+    background-color: #1a6cb5;
+}

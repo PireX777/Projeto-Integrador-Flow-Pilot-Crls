@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Nova Senha - FlowPilot</title>
+    <!-- Link para o arquivo CSS separado -->
+    <link rel="stylesheet" href="../static/css/crienovasenha.css">
+    <!-- Define a fonte Inter globalmente -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="main-body">
+
+    <!-- Container Principal do Card -->
+    <div class="card-container">
+        
+        <!-- Layout em duas colunas -->
+        <div class="two-column-layout">
+            
+            <!-- Coluna 1: Ilustração -->
+            <div class="illustration-column">
+                
+                <!-- Placeholder para a Ilustração -->
+                <div class="illustration-placeholder">
+                    
+                    <!-- Elementos abstratos para simular o estilo (Linhas e Círculo) -->
+                    <div class="abstract-shape line-1"></div>
+                    <div class="abstract-shape circle-1"></div>
+
+                    <!-- Conteúdo simulado da tela da ilustração -->
+                    <div class="illustration-screen">
+                        <div class="dot-group">
+                             <div class="dot red"></div>
+                             <div class="dot yellow"></div>
+                             <div class="dot green"></div>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-item">
+                                <div class="list-segment w-1/4 bg-gray-200"></div>
+                                <div class="list-segment w-3/4 bg-gray-100"></div>
+                                <div class="list-tag bg-red-500"></div>
+                            </li>
+                            <li class="list-item">
+                                <div class="list-segment w-1/3 bg-gray-200"></div>
+                                <div class="list-segment w-2/3 bg-gray-100"></div>
+                                <div class="list-tag bg-yellow-500"></div>
+                            </li>
+                            <li class="list-item">
+                                <div class="list-segment w-1/5 bg-gray-200"></div>
+                                <div class="list-segment w-4/5 bg-gray-100"></div>
+                                <div class="list-tag bg-green-500"></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Coluna 2: Formulário -->
+            <div class="form-column">
+                
+                <!-- Logo FlowPilot -->
+                <div class="logo-area">
+                    <!-- Ícone do FlowPilot (SVG) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="logo-icon" viewBox="0 0 512 512">
+                        <path fill="currentColor" d="M336 64h-32a16 16 0 0 0 -16 16v32a16 16 0 0 0 16 16h32a16 16 0 0 0 16-16V80a16 16 0 0 0 -16-16zm-32 320h32a16 16 0 0 0 16-16v-32a16 16 0 0 0 -16-16h-32a16 16 0 0 0 -16 16v32a16 16 0 0 0 16 16zm-176 0h32a16 16 0 0 0 16-16v-32a16 16 0 0 0 -16-16h-32a16 16 0 0 0 -16 16v32a16 16 0 0 0 16 16zm-32-176h32a16 16 0 0 0 16-16v-32a16 16 0 0 0 -16-16h-32a16 16 0 0 0 -16 16v32a16 16 0 0 0 16 16zM32 416a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V96a48 48 0 0 0 -48-48h-32V32a16 16 0 0 0 -16-16h-32a16 16 0 0 0 -16 16v16h-64V32a16 16 0 0 0 -16-16h-32a16 16 0 0 0 -16 16v16H80a48 48 0 0 0 -48 48v320z"/>
+                    </svg>
+                    <span class="logo-text"><img src="../static/imagens/logo.png" alt="" class="logo"> </span>
+                </div>
+                
+                <!-- Título e Subtítulo -->
+                <h1 class="main-title">Criar uma nova senha</h1>
+                <p class="subtitle-text">
+                    Por favor, digite sua nova senha. Sua nova senha deve ser diferente da senha anterior.
+                </p>
+                
+                <!-- Formulário -->
+                <form action="#" method="POST">
+                    
+                    <!-- Campo Nova Senha -->
+                    <div class="input-group">
+                        <label for="new-password" class="sr-only">Nova senha</label>
+                        <div class="input-wrapper">
+                            <input 
+                                type="password" 
+                                id="new-password" 
+                                placeholder="nova senha" 
+                                class="text-input"
+                                required
+                            >
+                            <!-- Ícone (Link/Cadeado) -->
+                            <div class="input-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.836a4 4 0 00-.58-3.69l-.16-.16A4 4 0 108.832 10.828l-.16.16a4 4 0 00-.58 3.69z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Campo Confirmar Senha -->
+                    <div class="input-group mb-8">
+                        <label for="confirm-password" class="sr-only">confirmar nova senha</label>
+                        <div class="input-wrapper">
+                            <input 
+                                type="password" 
+                                id="confirm-password" 
+                                placeholder="confirmar nova senha" 
+                                class="text-input"
+                                required
+                            >
+                            <!-- Ícone (Link/Cadeado) -->
+                            <div class="input-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.836a4 4 0 00-.58-3.69l-.16-.16A4 4 0 108.832 10.828l-.16.16a4 4 0 00-.58 3.69z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Botão Criar Senha -->
+                    <button 
+                        type="submit" 
+                        class="submit-button"
+                    >
+                        Criar senha
+                    </button>
+                    
+                </form>
+            </div>
+            
+        </div>
+        
+    </div>
+
+</body>
+</html>

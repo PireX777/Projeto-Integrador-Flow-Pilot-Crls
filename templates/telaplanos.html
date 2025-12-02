@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowPilot – Meus Planos</title>
+    <link rel="stylesheet" href="../static/css/telaplanos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo-area">
+            <img src="../static/imagens/logo.png" class="logo" alt="FlowPilot Logo">
+        </div>
+
+        <nav class="menu">
+            <a class="item" href="telausuario.html">
+                <i class="fa fa-user icon-fa"></i> Minha conta
+            </a>
+            <a class="item active" href="telaplanos.html">
+                <i class="fa fa-box icon-fa"></i> Meus planos
+            </a>
+            <a class="item" href="telaajuda.html">
+                <i class="fa fa-circle-question icon-fa"></i> Ajuda
+            </a>
+            <a class="item" href="sobrenos.html">
+                <i class="fa fa-info-circle icon-fa"></i> Sobre nós
+            </a>
+        </nav>
+    </aside>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="content">
+
+        <!-- TOPO -->
+        <header class="topbar">
+            <div class="search-wrapper">
+                <i class="fa fa-search search-icon" aria-hidden="true"></i>
+                <input type="text" placeholder="Pesquise" class="search">
+            </div>
+
+            <div class="topbar-right">
+                <div class="profile-mini">
+                    <img class="mini-photo" src="../static/imagens/avatar-default.svg" alt="avatar">
+                    <div class="mini-meta">
+                        <strong class="mini-name">Nome Usuário</strong>
+                        <p class="mini-role">Cargo</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- LISTA DE PLANOS -->
+        <div class="page-card">
+        <section class="plans-list">
+
+            <!-- Card 1 -->
+            <div class="plan-card">
+                <div class="plan-info">
+                    <h3>Padrão</h3>
+                    <p>Totalmente sem custos, até 5 equipes por membro; funções limitadas</p>
+                </div>
+                <button class="btn-details">Ver detalhes</button>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="plan-card">
+                <div class="plan-info">
+                    <h3>Intermediário</h3>
+                    <p>A partir de R$ 9,90 até 5 equipes por membro; Funções parciais</p>
+                </div>
+                <button class="btn-details">Ver detalhes</button>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="plan-card">
+                <div class="plan-info">
+                    <h3>Premium</h3>
+                    <p>A partir de R$ 19,90 equipes ilimitadas; Funções liberadas</p>
+                </div>
+                <button class="btn-details">Ver detalhes</button>
+            </div>
+
+        </section>
+        </div>
+
+        <!-- BARRA INFERIOR -->
+       <div class="bottom-nav">
+            <a href="home.html" class="icon-btn"><i class="fa fa-home"></i></a>
+            <a href="chat.html" class="icon-btn"><i class="fa fa-comment-dots"></i></a>
+            <a href="novo.html" class="icon-btn main-circle"><i class="fa fa-plus"></i></a>
+            <a href="check.html" class="icon-btn"><i class="fa fa-check"></i></a>
+            <a href="lista.html" class="icon-btn"><i class="fa fa-list-ul"></i></a>
+        </div>
+
+
+    </main>
+
+</div>
+
+<script src="../static/js/telaplanos.js"></script>
+</body>
+</html>

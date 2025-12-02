@@ -1,0 +1,66 @@
+/* Estilo da tela "Bem-vindo" do FlowPilot */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0B1124;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    background-color: #0D162F;
+    width: 600px;
+    padding: 50px 40px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.logo-icon {
+    width: 500px;
+    margin-bottom: 5px;
+}
+
+.logo-text {
+    font-size: 32px;
+    color: #dfe8ff;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.titulo {
+    font-size: 26px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.descricao {
+    color: #c8d1e9;
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 35px;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    background-color: #1658A8;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #0f3f7a;
+}

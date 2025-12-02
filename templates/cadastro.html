@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowPilot - Criar conta</title>
+    <link rel="stylesheet" href="../static/css/cadastro.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="../static/imagens/logo.png" class="logo-img" alt="Logo FlowPilot">
+        <h1 class="logo-text"></h1>
+
+        <div class="card">
+
+            <form id="registration-form">
+                <div class="input-group">
+                    <input id="firstName" type="text" placeholder="Nome">
+                    <input id="lastName" type="text" placeholder="Sobrenome">
+                </div>
+
+                <input id="reg-email" type="email" class="input" placeholder="Email">
+
+                <div class="password-wrapper">
+                    <input id="reg-password" type="password" class="input" placeholder="Senha">
+                    <span id="toggle-password-reg" class="toggle-password">👁️</span>
+                </div>
+
+                <input id="avatar-url" type="text" class="input" placeholder="URL do avatar (opcional)">
+                <label for="avatar-file" style="font-size:13px; color:#5a6b74; margin-top:6px; display:block">Ou faça upload de uma imagem:</label>
+                <input id="avatar-file" type="file" accept="image/*" class="input" style="padding:6px 8px;" />
+
+                <input id="role" type="text" class="input" placeholder="Cargo (opcional)">
+
+                <label class="checkbox">
+                    <input id="terms" type="checkbox">
+                    <span>Li e aceito os <a href="#">Termos de uso</a></span>
+                </label>
+
+                <div id="reg-message" style="margin:8px 0; color:#c00"></div>
+
+                <button id="create-account-btn" class="btn-primary" type="submit">Criar conta</button>
+
+                <p class="divider">ou continuar com</p>
+
+                <div class="social-login">
+                    <button class="social-btn google" type="button">Google</button>
+                    <button class="social-btn apple" type="button">Apple</button>
+                </div>
+
+                <p class="login-link">
+                    Já possui uma conta?  
+                    <a href="login2.html">Entrar agora</a>
+                </p>
+            </form>
+
+        </div>
+        <script src="../static/js/cadastro.js"></script>
+    </div>
+
+</body>
+</html>

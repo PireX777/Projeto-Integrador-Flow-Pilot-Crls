@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowPilot - Início</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0B1124;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .fade-out {
+            animation: fadeOut 0.8s forwards;
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="start-screen">
+        <div class="logo-box">
+            <img src="../static/imagens/logo.png" alt="FlowPilot Logo" class="logo-icon">
+            <h1 class="logo-text"></h1>
+        </div>
+    </div>
+
+    <script>
+        const screen = document.getElementById('start-screen');
+
+        screen.addEventListener('click', () => {
+            screen.classList.add('fade-out');
+            setTimeout(() => {
+                window.location.href = 'login.html';
+            }, 800); // espera a animação acabar
+        });
+    </script>
+
+</body>
+</html>

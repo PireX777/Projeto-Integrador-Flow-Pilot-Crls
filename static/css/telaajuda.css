@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: #f4f4f4;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    background: #083a72;
+    color: white;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.logo {
+    width: 130px;
+    margin-bottom: 50px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.menu .item {
+    display: flex;
+    align-items: center;
+    padding: 12px 14px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #e5e5e5;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.menu .item.active {
+    background: #46d1c4;
+    color: black;
+}
+
+.menu .item:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+.icon-fa { margin-right: 12px; font-size: 18px; }
+
+/* MAIN CONTENT */
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* TOPBAR */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #0c3f7e 0%, #0b3a6d 100%);
+    padding: 16px 28px;
+    border-top-right-radius: 20px;
+}
+
+.search-wrapper { position: relative; width: 58%; max-width: 720px; }
+.search { width: 100%; padding: 12px 15px 12px 40px; border-radius: 30px; border: none; font-size: 15px; }
+.search-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: #6aa7d9; }
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.profile-mini {
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 14px;
+}
+
+.mini-photo {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255,255,255,0.2);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    background: #00A896;
+}
+
+.mini-meta {
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+}
+
+.mini-meta strong {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.mini-role {
+    margin: 4px 0 0 0;
+    font-size: 13px;
+    color: #b8d9f0;
+    font-weight: 400;
+}
+
+/* CENTER CONTENT */
+.center-box {
+    flex: 1;
+    text-align: center;
+    padding: 40px 32px;
+}
+
+.flow-logo-box img {
+    width: 350px;
+    background: #0B132B;
+    padding: 40px;
+    border-radius: 18px;
+}
+
+.contact-info {
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.contact-info i {
+    color: #053B7A;
+    margin-right: 8px;
+}
+
+.social i {
+    font-size: 24px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.help-title {
+    margin-top: 35px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #0B132B;
+}
+
+/* MESSAGE BOX */
+.message-box {
+    width: 70%;
+    margin: 25px auto;
+    display: flex;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.message-box textarea {
+    width: 100%;
+    resize: none;
+    padding: 15px;
+    border: none;
+    outline: none;
+    height: 80px;
+    font-size: 15px;
+}
+
+.send {
+    width: 60px;
+    background: #083a72;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* BOTTOM NAV */
+.bottom-nav {
+    width: 64%;
+    margin: 34px auto;
+    background: #0B132B;
+    padding: 12px 0;
+    border-radius: 24px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.icon-btn {
+    color: #45C6C4;      /* cor dos ícones */
+    font-size: 24px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.icon-btn:hover {
+    transform: scale(1.12);
+    opacity: 0.9;
+}
+
+.icon-btn.main-circle {
+    background: #45C6C4;
+    color: #05222a;
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: 0 10px 28px rgba(69,198,196,0.14);
+}

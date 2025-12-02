@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #0d1126;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 80%;
+    height: 85vh;
+    background: #0d1126;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Lado esquerdo */
+.left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.illustration {
+    width: 550px;
+}
+
+/* Card de login */
+.login-card {
+    width: 380px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+
+.logo {
+    width: 290px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.icon {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.options a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background: #2a57ff;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.button{
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 13px;
+    text-decoration: underline;
+}
+
+.or {
+    margin: 10px 0;
+    font-size: 13px;
+    color: #777;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.social-buttons button {
+    width: 48%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.create {
+    font-size: 13px;
+}
+
+.create a {
+    color: #2a57ff;
+    text-decoration: none;
+}

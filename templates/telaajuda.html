@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowPilot — Ajuda</title>
+    <link rel="stylesheet" href="../static/css/telaajuda.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+<div class="layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo-area">
+            <img src="../static/imagens/logo.png" alt="FlowPilot" class="logo">
+        </div>
+
+        <nav class="menu">
+            <a href="telausuario.html" class="item"><i class="fa fa-user icon-fa"></i> Minha conta</a>
+            <a href="telaplanos.html" class="item"><i class="fa fa-box icon-fa"></i> Meus planos</a>
+            <a href="chat.html" class="item"><i class="fa fa-comment-dots icon-fa"></i> Membros</a>
+            <a href="telaajuda.html" class="item active"><i class="fa fa-circle-question icon-fa"></i> Ajuda</a>
+            <a href="sobrenos.html" class="item"><i class="fa fa-info-circle icon-fa"></i> Sobre nós</a>
+        </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+            <div class="search-wrapper">
+                <i class="fa fa-search search-icon" aria-hidden="true"></i>
+                <input type="text" placeholder="Pesquise" class="search">
+            </div>
+
+            <div class="topbar-right">
+                <div class="profile-mini">
+                    <img class="mini-photo" src="../static/imagens/avatar-default.svg" alt="avatar">
+                    <div class="mini-meta">
+                        <strong class="mini-name">Usuário</strong>
+                        <p class="mini-role">Cargo</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- LOGO CENTRAL -->
+        <section class="center-box">
+            <div class="flow-logo-box">
+                <img src="../static/imagens/logo.png" alt="FlowPilot">
+            </div>
+
+            <!-- CONTATOS -->
+            <div class="contact-info">
+                <p><i class="fa-brands fa-whatsapp"></i> <strong>Whatsapp:</strong> +55 (21)97534-9044</p>
+                <p><i class="fa fa-envelope"></i> <strong>Email:</strong> Flowpilot.emp0@gmail.com</p>
+
+                <strong>Redes:</strong>
+                <div class="social">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-google"></i>
+                </div>
+            </div>
+
+            <!-- FORM -->
+            <h2 class="help-title">Como podemos te ajudar?</h2>
+            <div class="message-box">
+                <textarea placeholder="Digite sua mensagem..."></textarea>
+                <button class="send"><i class="fa fa-paper-plane"></i></button>
+            </div>
+        </section>
+
+        <!-- BOTTOM NAV -->
+        <div class="bottom-nav">
+            <a href="home.html" class="icon-btn"><i class="fa fa-home"></i></a>
+            <a href="chat.html" class="icon-btn"><i class="fa fa-comment-dots"></i></a>
+            <a href="novo.html" class="icon-btn main-circle"><i class="fa fa-plus"></i></a>
+            <a href="check.html" class="icon-btn"><i class="fa fa-check"></i></a>
+            <a href="lista.html" class="icon-btn"><i class="fa fa-list-ul"></i></a>
+        </div>
+
+    </main>
+
+</div>
+
+<script src="../static/js/telaajuda-profile.js"></script>
+</body>
+</html>
