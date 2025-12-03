@@ -127,14 +127,14 @@ body {
     padding: 0 20px 60px 20px;
 }
 
-.cover-banner{ background: linear-gradient(90deg,#dff6f7,#eaf7f3); height:144px; border-radius:14px; position:relative; box-shadow:0 6px 18px rgba(0,0,0,0.06) }
+.cover-banner{ background: linear-gradient(90deg,#dff6f7,#eaf7f3); height:152px; border-radius:16px; position:relative; box-shadow:0 10px 30px rgba(2,14,33,0.06); padding:12px }
 
 .cover-banner .dec{ position:absolute; display:block }
 .cover-banner .dec-1{ width:36px; height:36px; background:#1f6b8a; border-radius:50%; left:28px; top:22px; box-shadow:0 4px 10px rgba(31,107,138,0.12) }
 .cover-banner .dec-2{ width:22px; height:22px; background:#2b94a6; border-radius:50%; left:120px; top:48px }
 .cover-banner .dec-3{ width:30px; height:30px; background:#6fd2c9; border-radius:50%; right:36px; top:18px }
 
-.avatar-big-wrap{ position:absolute; left:34px; top:92px }
+.avatar-big-wrap{ position:absolute; left:34px; top:76px; width:128px; height:128px; display:flex; align-items:center; justify-content:center; border-radius:50%; background: radial-gradient(circle at 30% 20%, rgba(69,198,196,0.18), rgba(11,107,117,0.08)); box-shadow:0 12px 30px rgba(11,107,117,0.08) }
 .avatar-big{ width:110px; height:110px; border-radius:50%; object-fit:cover; box-shadow:0 8px 22px rgba(0,0,0,0.12); border:6px solid #fff }
 
 .edit-circle{ position:absolute; right:36px; bottom:20px; width:40px; height:40px; border-radius:50%; background:#fff; border:none; box-shadow:0 6px 16px rgba(0,0,0,0.08); display:flex; align-items:center; justify-content:center; cursor:pointer }
@@ -181,6 +181,12 @@ body {
 .email {
     color: gray;
     margin: 5px 0;
+}
+
+.role-display {
+    color: #3279b8;
+    font-weight: 600;
+    margin: 4px 0 8px 0;
 }
 
 .contacts {
@@ -237,14 +243,13 @@ body {
 
 /* BARRA INFERIOR */
 .bottom-nav {
+    width: 10%;
+    margin: 40px auto;
     background: #0B132B;
-    margin: 30px auto;
-    padding: 12px 20px;
     border-radius: 24px;
-    width: 60%;
     display: flex;
     justify-content: space-around;
-    align-items:center;
+    align-items: center;
 }
 
 .nav-item {
@@ -277,11 +282,11 @@ body {
 }
 
 .bottom-nav {
-    width: 60%;
-    margin: 40px auto;
+    width: 64%;
+    margin: 34px auto;
     background: #0B132B;
-    padding: 15px 0;
-    border-radius: 20px;
+    padding: 12px 0;
+    border-radius: 24px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -289,26 +294,26 @@ body {
 
 .icon-btn {
     color: #45C6C4;      /* cor dos ícones */
-    font-size: 28px;
+    font-size: 24px;
     text-decoration: none;
     transition: 0.2s;
 }
 
 .icon-btn:hover {
-    transform: scale(1.15);
-    opacity: 0.8;
+    transform: scale(1.12);
+    opacity: 0.9;
 }
 
 .icon-btn.main-circle {
     background: #45C6C4;
     color: #05222a;
     border-radius: 50%;
-    width: 56px;
-    height: 56px;
+    width: 52px;
+    height: 52px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 22px;
+    font-size: 20px;
     box-shadow: 0 10px 28px rgba(69,198,196,0.14);
 }
 
@@ -323,3 +328,19 @@ body {
     .rightbar{ display:none }
     .logo{ width:80px }
 }
+
+/* Modal styles for profile edit */
+.modal-overlay { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; background: rgba(3,7,18,0.5); z-index: 1300; padding: 20px; }
+.modal-overlay[aria-hidden="false"] { display: flex; }
+.modal-content { background: #fff; border-radius: 12px; max-width: 600px; width: 100%; padding: 20px 22px; box-shadow: 0 24px 60px rgba(2,14,33,0.18); position: relative; }
+.modal-content h2 { margin: 0 0 12px 0; }
+.modal-close { position: absolute; right: 12px; top: 8px; border: none; background: transparent; font-size: 24px; cursor: pointer; }
+.form-row { display: flex; flex-direction: column; gap:6px; margin-bottom:12px; }
+.form-row label { font-size: 13px; color: #374151; }
+.form-row input[type="text"], .form-row input[type="email"], .form-row input[type="url"], .form-row input[type="file"] { padding: 10px 12px; border-radius: 8px; border: 1px solid #e5e7eb; font-size: 15px; }
+.field-feedback { font-size: 13px; color: #c00; margin-top:6px; }
+.modal-actions { display:flex; gap:10px; margin-top:8px; }
+.modal-actions .btn-details { background:#00A896; color:#fff; border:none; padding:10px 14px; border-radius:10px; cursor:pointer; }
+.modal-actions .modal-cancel { background:#f3f4f6; color:#111827; }
+
+@media (max-width: 520px) { .modal-content { padding: 16px; } .modal-actions { flex-direction: column; } }

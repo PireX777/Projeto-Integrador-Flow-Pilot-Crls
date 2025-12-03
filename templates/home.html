@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FlowPilot — Dashboard</title>
     <link rel="stylesheet" href="../static/css/home.css">
+    <link rel="stylesheet" href="../static/css/responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
+
+<script src="../static/js/auth.js"></script>
+<script>if (window.__auth) window.__auth.ensureLoggedIn();</script>
 <div class="layout">
     <!-- SIDEBAR -->
     <aside class="sidebar">
@@ -20,9 +24,7 @@
         <nav class="menu">
             <a href="telausuario.html" class="item"><i class="fa fa-user icon-fa"></i> Minha conta</a>
             <a href="telaplanos.html" class="item"><i class="fa fa-box icon-fa"></i> Meus planos</a>
-            <a href="chat.html" class="item"><i class="fa fa-comment-dots icon-fa"></i> Membros</a>
             <a href="telaajuda.html" class="item"><i class="fa fa-circle-question icon-fa"></i> Ajuda</a>
-            <a href="sobrenos.html" class="item"><i class="fa fa-info-circle icon-fa"></i> Sobre nós</a>
         </nav>
     </aside>
 
@@ -52,24 +54,72 @@
 
             <div class="card small-card">
                 <div class="card-top">
-                    <i class="fa fa-trophy card-icon"></i>
+                    <div class="card-left">
+                        <div class="card-icon">
+                            <img src="../static/imagens/TROFEU.png" alt="Troféu" class="card-icon-img">
+                        </div>
+                        <div class="card-title">MEUS<br>PROJETOS</div>
+                    </div>
+                    <div class="card-right">
+                        <div class="right-top">
+                            <div class="mini-avatars">
+                                <div class="avatar-wrap"><img src="../static/imagens/avatar-default.svg" alt="u1"></div>
+                                <div class="avatar-wrap"><img src="../static/imagens/avatar-default.svg" alt="u2"></div>
+                            </div>
+                            <div class="card-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+                        </div>
+                        <div class="right-bottom">
+                            <div class="mini-bars">
+                                <span class="bar1"></span>
+                                <span class="bar2"></span>
+                                <span class="bar3"></span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h3>MEUS PROJETOS</h3>
             </div>
 
             <div class="card small-card">
                 <div class="card-top">
-                    <i class="fa fa-users card-icon"></i>
+                    <div class="card-left">
+                        <div class="card-icon">
+                            <img src="../static/imagens/users-group.png" alt="Equipe" class="card-icon-img">
+                        </div>
+                        <div class="card-title">MINHA<br>EQUIPE</div>
+                    </div>
+                    <div class="card-right">
+                        <div class="right-top">
+                            <div class="mini-avatars">
+                                <div class="avatar-wrap"><img src="../static/imagens/avatar-default.svg" alt="u1"></div>
+                                <div class="avatar-wrap"><img src="../static/imagens/avatar-default.svg" alt="u2"></div>
+                            </div>
+                            <div class="card-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+                        </div>
+                        <div class="right-bottom">
+                            <div class="mini-bars">
+                                <span class="bar1"></span>
+                                <span class="bar2"></span>
+                                <span class="bar3"></span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h3>MINHA EQUIPE</h3>
             </div>
 
             <div class="card big-card">
                 <div class="big-content">
-                    <img src="../static/imagens/IMAGEMCOMPETICAO.png" width="200">
-                    <h1>QUIZ<br>GAMIFICADO</h1>
-                    <iframe frameborder="0" src="https://itch.io/embed/4082730" width="600" height="280"><a href="https://sahb4.itch.io/quizpilot">QUIZPILOT by sahb4</a></iframe>
+                    <div class="big-art">
+                        <img src="../static/imagens/IMAGEMCOMPETICAO.png" alt="Competição" class="big-competition">
+                    </div>
+                    <div class="big-right">
+                        <h1>QUIZ<br>GAMIFICADO</h1>
+                        <p class="big-sub">Participe, aprenda e dispute com sua equipe.</p>
+                        <div class="big-cta inline-cta">
+                            <a class="cta-btn small" href="https://sahb4.itch.io/quizpilot" target="_blank" rel="noopener">Jogar agora</a>
+                        </div>
+                    </div>
                 </div>
+                
             </div>
 
         </section>
@@ -87,6 +137,6 @@
 
 </div>
 
-<script src="../static/js/home-profile.js"></script>
+<script src="../static/js/profile-widget.js"></script>
 </body>
 </html>

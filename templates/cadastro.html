@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FlowPilot - Criar conta</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="../static/css/cadastro.css">
+    <link rel="stylesheet" href="../static/css/responsive.css">
 </head>
 
 <body>
@@ -17,22 +19,35 @@
 
             <form id="registration-form">
                 <div class="input-group">
-                    <input id="firstName" type="text" placeholder="Nome">
-                    <input id="lastName" type="text" placeholder="Sobrenome">
+                    <div class="input-wrapper">
+                        <input id="firstName" type="text" placeholder="Nome">
+                    </div>
+                    <div class="input-wrapper">
+                        <input id="lastName" type="text" placeholder="Sobrenome">
+                    </div>
                 </div>
 
-                <input id="reg-email" type="email" class="input" placeholder="Email">
+                <div class="input-wrapper">
+                    <input id="reg-email" type="email" class="input" placeholder="Email">
+                </div>
 
-                <div class="password-wrapper">
+                <div class="input-wrapper">
+                    <label for="role" style="display:block; margin-bottom:6px; color:#374151; font-size:14px">Cargo</label>
+                    <select id="role" class="input" style="padding:10px 12px; border-radius:8px; border:1px solid #e5e7eb; font-size:15px;">
+                        <option value="">Selecione um cargo (opcional)</option>
+                        <option value="Coordenador">Coordenador</option>
+                        <option value="Líder de equipe">Líder de equipe</option>
+                        <option value="Desenvolvedor">Desenvolvedor</option>
+                        <option value="Designer">Designer</option>
+                        <option value="Estudante">Estudante</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
+
+                <div class="input-wrapper password-wrapper">
                     <input id="reg-password" type="password" class="input" placeholder="Senha">
-                    <span id="toggle-password-reg" class="toggle-password">👁️</span>
+                    <span id="toggle-password-reg" class="toggle-password material-icons">visibility_off</span>
                 </div>
-
-                <input id="avatar-url" type="text" class="input" placeholder="URL do avatar (opcional)">
-                <label for="avatar-file" style="font-size:13px; color:#5a6b74; margin-top:6px; display:block">Ou faça upload de uma imagem:</label>
-                <input id="avatar-file" type="file" accept="image/*" class="input" style="padding:6px 8px;" />
-
-                <input id="role" type="text" class="input" placeholder="Cargo (opcional)">
 
                 <label class="checkbox">
                     <input id="terms" type="checkbox">
@@ -44,12 +59,6 @@
                 <button id="create-account-btn" class="btn-primary" type="submit">Criar conta</button>
 
                 <p class="divider">ou continuar com</p>
-
-                <div class="social-login">
-                    <button class="social-btn google" type="button">Google</button>
-                    <button class="social-btn apple" type="button">Apple</button>
-                </div>
-
                 <p class="login-link">
                     Já possui uma conta?  
                     <a href="login2.html">Entrar agora</a>

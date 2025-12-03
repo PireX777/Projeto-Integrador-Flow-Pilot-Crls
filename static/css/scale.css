@@ -1,0 +1,11 @@
+/* Global UI scale (set to 1.0 — no visual scaling) */
+html, body {
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  /* keep width consistent with no scaling */
+  width: 100%;
+}

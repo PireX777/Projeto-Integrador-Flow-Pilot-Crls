@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FlowPilot – Meus Planos</title>
     <link rel="stylesheet" href="../static/css/telaplanos.css">
+    <link rel="stylesheet" href="../static/css/responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+
+<script src="../static/js/auth.js"></script>
+<script>if (window.__auth) window.__auth.ensureLoggedIn();</script>
 
 <div class="layout">
 
@@ -28,8 +32,6 @@
             <a class="item" href="telaajuda.html">
                 <i class="fa fa-circle-question icon-fa"></i> Ajuda
             </a>
-            <a class="item" href="sobrenos.html">
-                <i class="fa fa-info-circle icon-fa"></i> Sobre nós
             </a>
         </nav>
     </aside>
@@ -89,6 +91,19 @@
         </section>
         </div>
 
+        <!-- MODAL DE DETALHES DO PLANO -->
+        <div id="plan-modal" class="modal-overlay" aria-hidden="true">
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Fechar">×</button>
+                <h2 id="modal-title">Título do Plano</h2>
+                <p id="modal-desc">Descrição completa do plano selecionado.</p>
+                <div class="modal-actions">
+                    <button class="btn-details modal-subscribe">Assinar / Contratar</button>
+                    <button class="btn-details modal-cancel">Fechar</button>
+                </div>
+            </div>
+        </div>
+
         <!-- BARRA INFERIOR -->
        <div class="bottom-nav">
             <a href="home.html" class="icon-btn"><i class="fa fa-home"></i></a>
@@ -104,5 +119,6 @@
 </div>
 
 <script src="../static/js/telaplanos.js"></script>
+<script src="../static/js/profile-widget.js"></script>
 </body>
 </html>

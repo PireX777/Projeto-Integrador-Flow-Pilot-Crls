@@ -222,6 +222,11 @@ body {
     color: #9aaac0;
 }
 
+/* message timestamp and typing */
+.msg-ts { font-size:11px; color:#6b7280; margin-top:6px }
+.chat-typing { padding:6px 0 }
+.chat-typing img { box-shadow:0 2px 6px rgba(0,0,0,0.08) }
+
 /* BOTTOM NAV */
 .bottom-nav {
     width: 64%;

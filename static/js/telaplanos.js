@@ -54,10 +54,62 @@ function wireUpCards() {
       document.querySelectorAll('.plan-card.selected').forEach(c => c.classList.remove('selected'));
       card.classList.add('selected');
     });
+    // wire the 'Ver detalhes' button inside each card
+    const btn = card.querySelector('.btn-details');
+    if (btn) {
+      btn.addEventListener('click', (ev) => {
+        ev.stopPropagation();
+        openPlanModal(card);
+      });
+    }
+  });
+}
+
+// Modal handling
+function openPlanModal(card) {
+  const title = card.querySelector('h3') ? card.querySelector('h3').textContent : 'Plano';
+  const desc = card.querySelector('p') ? card.querySelector('p').textContent : '';
+  const modal = document.getElementById('plan-modal');
+  if (!modal) return;
+  const titleEl = modal.querySelector('#modal-title');
+  const descEl = modal.querySelector('#modal-desc');
+  if (titleEl) titleEl.textContent = title;
+  if (descEl) descEl.textContent = desc;
+  modal.setAttribute('aria-hidden','false');
+  document.body.style.overflow = 'hidden';
+}
+
+function closePlanModal() {
+  const modal = document.getElementById('plan-modal');
+  if (!modal) return;
+  modal.setAttribute('aria-hidden','true');
+  document.body.style.overflow = '';
+}
+
+function wireModalEvents() {
+  const modal = document.getElementById('plan-modal');
+  if (!modal) return;
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closePlanModal();
+  });
+  const closeBtn = modal.querySelector('.modal-close');
+  if (closeBtn) closeBtn.addEventListener('click', closePlanModal);
+  const cancelBtn = modal.querySelector('.modal-cancel');
+  if (cancelBtn) cancelBtn.addEventListener('click', closePlanModal);
+  // ESC to close
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closePlanModal();
+  });
+  const subscribeBtn = modal.querySelector('.modal-subscribe');
+  if (subscribeBtn) subscribeBtn.addEventListener('click', () => {
+    // placeholder action: close modal and show alert
+    closePlanModal();
+    alert('Obrigado! Proceder para assinatura / checkout (não implementado).');
   });
 }
 
 window.addEventListener('DOMContentLoaded', () => {
   loadProfileMini();
   wireUpCards();
+  wireModalEvents();
 });

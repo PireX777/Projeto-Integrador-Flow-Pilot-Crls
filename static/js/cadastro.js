@@ -17,7 +17,72 @@ document.addEventListener('DOMContentLoaded', () => {
     togglePassword.addEventListener('click', () => {
       const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
       passwordInput.setAttribute('type', type);
-      togglePassword.textContent = type === 'password' ? '👁️' : '🙈';
+      togglePassword.textContent = type === 'password' ? 'visibility_off' : 'visibility';
+    });
+  }
+
+  // Forçar lowercase no campo de email enquanto digita
+  if (emailInput) {
+    emailInput.addEventListener('input', () => {
+      const pos = emailInput.selectionStart;
+      emailInput.value = emailInput.value.toLowerCase();
+      try { emailInput.setSelectionRange(pos, pos); } catch(e) {}
+    });
+  }
+
+  // criar elemento de feedback inline (após o campo de email)
+  let emailFeedback = document.querySelector('#reg-email-feedback');
+  if (!emailFeedback && emailInput) {
+    emailFeedback = document.createElement('div');
+    emailFeedback.id = 'reg-email-feedback';
+    emailFeedback.style.marginTop = '6px';
+    emailFeedback.style.fontSize = '13px';
+    emailFeedback.style.color = '#c00';
+    emailInput.parentNode.insertBefore(emailFeedback, emailInput.nextSibling);
+  }
+
+  const createBtn = document.querySelector('#create-account-btn');
+
+  function isEmailTaken(value) {
+    try {
+      const usersJson = localStorage.getItem('users');
+      const users = usersJson ? JSON.parse(usersJson) : [];
+      return users.some(u => (u.email || '').toLowerCase() === (value || '').toLowerCase());
+    } catch (e) { return false; }
+  }
+
+  function updateEmailFeedback() {
+    const v = (emailInput.value || '').trim();
+    if (!v) {
+      emailFeedback.textContent = '';
+      if (createBtn) createBtn.disabled = false;
+      return;
+    }
+    if (!validateEmail(v)) {
+      emailFeedback.style.color = '#c00';
+      emailFeedback.textContent = 'Email inválido.';
+      if (createBtn) createBtn.disabled = true;
+      return;
+    }
+    if (isEmailTaken(v)) {
+      emailFeedback.style.color = '#c00';
+      emailFeedback.textContent = 'Este email já está sendo utilizado.';
+      if (createBtn) createBtn.disabled = true;
+      return;
+    }
+    emailFeedback.style.color = '#0a7';
+    emailFeedback.textContent = '';
+    if (createBtn) createBtn.disabled = false;
+  }
+
+  // trim on blur and update feedback
+  if (emailInput) {
+    emailInput.addEventListener('blur', () => {
+      emailInput.value = emailInput.value.trim();
+      updateEmailFeedback();
+    });
+    emailInput.addEventListener('input', () => {
+      updateEmailFeedback();
     });
   }
 
@@ -86,11 +151,11 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // adicionar novo usuário
+    // adicionar novo usuário (armazenar email em lowercase para consistência)
     const newUser = {
       firstName: fname,
       lastName: lname,
-      email: email,
+      email: email.toLowerCase(),
       password: password
     };
     if (avatarUrl) newUser.avatarUrl = avatarUrl;
@@ -99,24 +164,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     localStorage.setItem('users', JSON.stringify(users));
 
-    // preparar sessão do usuário recém-criado e redirecionar para o perfil
-    const logged = {
-      email: newUser.email,
-      name: (newUser.firstName || '') + (newUser.lastName ? (' ' + newUser.lastName) : ''),
-      firstName: newUser.firstName,
-      lastName: newUser.lastName,
-      avatarUrl: newUser.avatarUrl || '',
-      description: newUser.description || '',
-      contacts: 21,
-      teams: ['EQUIPE 1 - Membro', 'EQUIPE 2 - Membro']
-    };
-    try { sessionStorage.setItem('loggedInUser', JSON.stringify(logged)); } catch(e){}
-
+    // Após cadastro, redirecionar para a tela de login (não efetuar auto-login)
     messageBox.style.color = 'green';
-    messageBox.textContent = 'Conta criada com sucesso! Entrando no perfil...';
-
+    messageBox.textContent = 'Conta criada com sucesso! Redirecionando para login...';
     setTimeout(() => {
-      window.location.href = 'telausuario.html';
-    }, 900);
+      const target = `login2.html?registered=1&email=${encodeURIComponent(email.toLowerCase())}`;
+      window.location.href = target;
+    }, 700);
   });
 });

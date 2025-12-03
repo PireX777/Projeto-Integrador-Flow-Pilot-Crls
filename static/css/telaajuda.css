@@ -190,6 +190,14 @@ body {
     cursor: pointer;
 }
 
+/* messages and typing */
+.help-messages .help-msg { margin-bottom: 10px; text-align: left }
+.help-messages .help-msg.bot .bubble { background: #f3f9f9; color: #0b132b }
+.help-messages .help-msg.user .bubble { background: #0b6b75; color: #fff }
+.help-messages .bubble { display: inline-block; padding: 10px 12px; border-radius: 10px; box-shadow: 0 2px 12px rgba(2,14,33,0.04) }
+.msg-ts { font-size: 11px; color: #6b7280; margin-top: 6px }
+.help-typing .bubble { background:#fff }
+
 /* BOTTOM NAV */
 .bottom-nav {
     width: 64%;

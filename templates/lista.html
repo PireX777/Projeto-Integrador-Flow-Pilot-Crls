@@ -3,23 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FlowPilot — Minhas Metas</title>
-  <link rel="stylesheet" href="../static/css/home.css" />
+  <title>FlowPilot — Projetos e Tarefas</title>
+  <link rel="stylesheet" href="../static/css/exemplo-projetos.css" />
+  <link rel="stylesheet" href="../static/css/responsive.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body>
+
+<script src="../static/js/auth.js"></script>
+<script>if (window.__auth) window.__auth.ensureLoggedIn();</script>
+<div class="layout">
   <!-- SIDEBAR -->
   <aside class="sidebar">
     <div class="logo-area">
       <img src="../static/imagens/logo.png" alt="FlowPilot" class="logo" />
     </div>
 
-    <nav class="sidebar-menu">
-      <a href="telausuario.html" class="item active"><i class="fa fa-user"></i> Minha conta</a>
-      <a href="telaplanos.html" class="item"><i class="fa fa-box"></i> Meus planos</a>
-      <a href="telaajuda.html" class="item"><i class="fa fa-circle-question"></i> Ajuda</a>
-      <a href="sobrenos.html" class="item"><i class="fa fa-info-circle"></i> Sobre nós</a>
+    <nav class="menu">
+      <a href="telausuario.html" class="item"><i class="fa fa-user icon-fa"></i> Minha conta</a>
+      <a href="telaplanos.html" class="item"><i class="fa fa-box icon-fa"></i> Meus planos</a>
+      <a href="telaajuda.html" class="item"><i class="fa fa-circle-question icon-fa"></i> Ajuda</a>
     </nav>
   </aside>
 
@@ -27,37 +32,115 @@
   <main class="content">
     <!-- TOPBAR -->
     <header class="topbar">
-      <input type="text" class="search" placeholder="🔍 Pesquise" />
-      <div class="user-info">
-        <span class="divider"></span>
-        <div class="avatar">HM</div>
-        <div class="user-text">
-          <strong>Helena Moura</strong>
-          <p>Membro</p>
+      <div class="search-wrapper">
+        <i class="fa fa-search search-icon" aria-hidden="true"></i>
+        <input type="text" placeholder="Pesquise" class="search">
+      </div>
+
+      <div class="topbar-right">
+        <div class="profile-mini">
+          <img class="mini-photo" src="../static/imagens/avatar-default.svg" alt="avatar">
+          <div class="mini-meta">
+            <strong class="mini-name">Usuário</strong>
+            <p class="mini-role">Cargo</p>
+          </div>
         </div>
       </div>
     </header>
 
-    <!-- METAS -->
-    <section class="goals">
-      <h2><i class="fa fa-trophy"></i> Minhas Metas</h2>
-      <ul class="goal-list">
-        <li><i class="fa fa-check-circle"></i> Cumpridas</li>
-        <li><i class="fa fa-hourglass-half"></i> A serem cumpridas</li>
-        <li><i class="fa fa-chart-line"></i> Meus resultados</li>
-        <li><i class="fa fa-star"></i> Desempenho geral</li>
-        <li><i class="fa fa-question-circle"></i> Desempenho do quiz</li>
-      </ul>
-    </section>
+    <!-- PROJETOS E TAREFAS -->
+    <section class="projects-section">
+      <div class="projects-header">
+        <div class="header-content">
+          <img src="../static/imagens/trofeu.png" alt="Troféu" class="header-icon">
+          <h1 class="section-title">Minhas<br>Metas</h1>
+        </div>
+      </div>
 
+      <div class="projects-container">
+        
+       <!-- PROJETO 1 -->
+        <div class="project">
+          <div class="project-header">
+            <span class="project-name">CUMPRIDAS</span>
+            <button class="project-toggle"><i class="fa fa-chevron-down"></i></button>
+          </div>
+
+          <div class="tasks-list">
+            <div class="task-row">
+              <label class="select-circle"><input type="checkbox" /></label>
+              <span class="task-name">À SEREM CUMPRIMAS</span>
+              <div class="task-menu"><i class="fa fa-ellipsis-h"></i></div>
+            </div>
+
+            <div class="task-row">
+              <label class="select-circle"><input type="checkbox" /></label>
+              <span class="task-name">MEUS RESULTADOS</span>
+              <div class="task-menu"><i class="fa fa-ellipsis-h"></i></div>
+            </div>
+            
+            <div class="task-row">
+              <label class="select-circle"><input type="checkbox" /></label>
+              <span class="task-name">DESEMPENHO GERAL</span>
+              <div class="task-menu"><i class="fa fa-ellipsis-h"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJETO 2 -->
+        <div class="project">
+          <div class="project-header">
+            <span class="project-name">RESULTADOS</span>
+            <button class="project-toggle"><i class="fa fa-chevron-down"></i></button>
+          </div>
+
+          <div class="tasks-list" style="display: none;">
+            <div class="task-row">
+              <label class="select-circle"><input type="checkbox" /></label>
+              <span class="task-name">DESEMPENHO DO QUIZ</span>
+              <div class="task-menu"><i class="fa fa-ellipsis-h"></i></div>
+            </div>
+
+            <div class="task-row">
+              <label class="select-circle"><input type="checkbox" /></label>
+              <span class="task-name">MEUS RESULTADOS</span>
+              <div class="task-menu"><i class="fa fa-ellipsis-h"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
     <!-- BOTTOM NAV -->
     <div class="bottom-nav">
       <a href="home.html" class="icon-btn"><i class="fa fa-home"></i></a>
       <a href="chat.html" class="icon-btn"><i class="fa fa-comment-dots"></i></a>
-      <a href="novo.html" class="icon-btn"><i class="fa fa-plus"></i></a>
+      <a href="novo.html" class="icon-btn main-circle"><i class="fa fa-plus"></i></a>
       <a href="check.html" class="icon-btn"><i class="fa fa-check"></i></a>
       <a href="lista.html" class="icon-btn"><i class="fa fa-list-ul"></i></a>
     </div>
+
   </main>
+
+</div>
+
+<script>
+  // Toggle de projetos
+  document.querySelectorAll('.project-toggle').forEach(button => {
+    button.addEventListener('click', function() {
+      const tasksList = this.closest('.project').querySelector('.tasks-list');
+      const isOpening = tasksList.style.display === 'none';
+      tasksList.style.display = isOpening ? 'block' : 'none';
+      this.querySelector('i').classList.toggle('fa-chevron-down');
+      this.querySelector('i').classList.toggle('fa-chevron-up');
+
+      // Verifica se alguma tasks-list está visível
+      const anyOpen = Array.from(document.querySelectorAll('.tasks-list')).some(el => el.style.display === 'block');
+      document.body.style.overflow = anyOpen ? 'hidden' : '';
+    });
+  });
+</script>
+<script src="../static/js/profile-widget.js"></script>
+
 </body>
 </html>

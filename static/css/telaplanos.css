@@ -192,7 +192,7 @@ body {
 /* BOTTOM NAV */
 .bottom-nav {
     width: 64%;
-    margin: 34px auto;
+    margin: 240px auto 34px auto;
     background: #0B132B;
     padding: 12px 0;
     border-radius: 24px;
@@ -230,5 +230,43 @@ body {
     .layout { grid-template-columns: 1fr; }
     .page-card { max-width: 100%; margin: 18px; }
     .search { width: 45%; }
+}
+
+/* Modal styles for plan details */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(3,7,18,0.48);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1200;
+    padding: 20px;
+}
+.modal-overlay[aria-hidden="false"] { display: flex; }
+.modal-content {
+    background: #fff;
+    border-radius: 12px;
+    max-width: 640px;
+    width: 100%;
+    padding: 22px 24px;
+    box-shadow: 0 24px 60px rgba(2,14,33,0.18);
+    position: relative;
+}
+.modal-close {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    background: transparent;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+.modal-actions { display:flex; gap:12px; margin-top:18px; }
+.modal-actions .btn-details { padding: 10px 16px; border-radius: 10px; }
+
+@media (max-width: 600px) {
+    .modal-content { padding: 18px; }
+    .modal-actions { flex-direction: column; }
 }
 
